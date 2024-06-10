@@ -18,10 +18,42 @@
         };
     </script>
 
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #007bff; /* Blue color */
+            padding: 10px; /* Decreased height */
+        }
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            color: white;
+        }
+        .navbar .nav-link:hover {
+            color: #cccccc;
+        }
+        .container.body-content {
+            margin-top: 5%;
+        }
+        .card {
+            border-radius: 15px;
+        }
+        .card-header {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-color: #007bff; /* Blue color */
+            padding: 10px; /* Decreased height */
+        }
+        .btn-block {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark">
         <div class="container">
             @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
@@ -47,8 +79,6 @@
     </nav>
     <div class="container body-content">
         @RenderBody()
-     
-
     </div>
 
     @Scripts.Render("~/bundles/jquery")
